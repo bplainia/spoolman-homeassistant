@@ -1,0 +1,13 @@
+name: PR Tests
+
+on:
+    pull_request:
+        branches: ['dev']
+        paths: ['custom_components/**']
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+
+  validate:
+    uses: ./.github/workflows/validate.yml
